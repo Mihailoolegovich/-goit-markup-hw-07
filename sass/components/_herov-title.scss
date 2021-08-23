@@ -1,0 +1,51 @@
+//   Herov title
+
+.herov {
+  max-width: 1600px;
+  background-color: #c4c4c4;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/index_img/fon.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 200px 0;
+  margin: 0 auto;
+
+  &__title {
+    text-align: center;
+    margin: 0 auto 30px;
+    max-width: 696px;
+    text-transform: uppercase;
+
+    color: $primary-white-color;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+  }
+
+  &__button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 32px;
+    color: $primary-white-color;
+    background-color: $accent-coolor;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid $accent-coolor;
+
+    transition: background-color $transition-duration-timing;
+  }
+
+  &__button:hover,
+  &__button:focus {
+    background-color: #188ce8;
+  }
+}
