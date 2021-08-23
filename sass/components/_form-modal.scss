@@ -118,14 +118,14 @@
     fill: $accent-coolor;
   }
 
-  &__input_textarea {
+  &__input--textarea {
     padding-left: 16px;
     padding-top: 12px;
     height: 120px;
     resize: none;
   }
 
-  &__input_textarea::placeholder {
+  &__input--textarea::placeholder {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.2;
@@ -140,16 +140,10 @@
     margin: 30px auto 0;
     width: 200px;
     height: 50px;
+    //  Button in ( _global-styless.scss)
+    @extend %button;
 
-    color: $primary-white-color;
-    background-color: $accent-coolor;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.9;
     letter-spacing: 0.06em;
-    cursor: pointer;
-    border-radius: 4px;
-    border: 1px solid $accent-coolor;
   }
 }
 

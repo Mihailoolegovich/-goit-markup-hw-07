@@ -1,9 +1,8 @@
 body {
   color: $primary-color;
   background: $primary-white-color;
-  font-family: "Roboto", sans-serif;
+  font-family: $font-family-Roboto;
 }
-
 //    Style none
 ul,
 li {
@@ -47,4 +46,35 @@ img {
   padding: 0 15px;
   margin: 0 auto;
   width: 1200px;
+}
+
+//    Social
+.social {
+  display: flex;
+  justify-content: center;
+
+  &__link:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+  }
+}
+
+//    Button
+%button {
+  color: $primary-white-color;
+  background-color: $accent-coolor;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid $accent-coolor;
 }

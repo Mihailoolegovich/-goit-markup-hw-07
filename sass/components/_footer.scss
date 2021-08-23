@@ -10,7 +10,7 @@
   align-items: baseline;
 }
 
-.nav__site_footer {
+.nav__site--footer {
   display: block;
   margin-bottom: 20px;
   height: 31px;
@@ -49,10 +49,6 @@
   }
 }
 
-// .links-footer {
-//   height: 21px;
-// }
-
 //      Invitation
 
 .invitation {
@@ -70,34 +66,17 @@
   }
 }
 
-.social {
-  display: flex;
+//     Social  in ( _global-styles.scss )
+.social__icon--footer {
+  fill: $primary-white-color;
+  background-color: rgba(225, 225, 225, 0.1);
 
-  &__link:not(:last-child) {
-    margin-right: 10px;
-  }
+  transition: background-color $transition-duration-timing;
+}
 
-  &__icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-  }
-
-  &__icon_footer {
-    fill: $primary-white-color;
-    background-color: rgba(225, 225, 225, 0.1);
-
-    transition: background-color $transition-duration-timing;
-    //    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  &__icon_footer:hover,
-  &__icon_footer:focus {
-    background-color: $accent-coolor;
-  }
+.social__icon--footer:hover,
+.social__icon--footer:focus {
+  background-color: $accent-coolor;
 }
 
 //      Form-footer
@@ -145,15 +124,10 @@
     width: 200px;
     height: 50px;
     padding: 10px 30px;
+    //  Button in ( _global-styless.scss)
+    @extend %button;
 
-    color: $primary-white-color;
-    background-color: $accent-coolor;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.9;
     letter-spacing: 0.06em;
-    cursor: pointer;
-    border-radius: 4px;
     border: none;
 
     transition: background-color $transition-duration-timing;

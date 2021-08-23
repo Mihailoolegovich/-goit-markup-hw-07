@@ -32,14 +32,8 @@
     display: block;
     margin: 0 auto;
     padding: 10px 32px;
-    color: $primary-white-color;
-    background-color: $accent-coolor;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.9;
-    cursor: pointer;
-    border-radius: 4px;
-    border: 1px solid $accent-coolor;
+    //  Button in ( _global-styless.scss)
+    @extend %button;
 
     transition: background-color $transition-duration-timing;
   }
