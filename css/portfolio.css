@@ -461,9 +461,10 @@ img {
 }
 
 .form-footer__input {
+  padding-left: 16px;
+  margin-right: 12px;
   height: 50px;
   width: 100%;
-  margin-right: 12px;
   background-color: #2f303a;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -474,7 +475,6 @@ img {
   display: flex;
   -webkit-box-align: centr;
           align-items: centr;
-  padding-left: 16px;
   color: #ffffff;
 }
 
@@ -483,7 +483,6 @@ img {
   display: flex;
   -ms-flex-align: centr;
       align-items: centr;
-  padding-left: 16px;
   color: #ffffff;
 }
 
@@ -492,7 +491,6 @@ img {
   display: flex;
   -ms-flex-align: centr;
       align-items: centr;
-  padding-left: 16px;
   color: #ffffff;
 }
 
@@ -503,7 +501,20 @@ img {
   -webkit-box-align: centr;
       -ms-flex-align: centr;
           align-items: centr;
-  padding-left: 16px;
+  color: #ffffff;
+}
+
+.form-footer__input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-footer__input:not(:focus) {
+  color: #ffffff;
+}
+
+.form-footer__input:focus {
+  border: 1px solid #afb1b8;
+  outline: none;
   color: #ffffff;
 }
 
