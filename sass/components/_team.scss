@@ -54,17 +54,33 @@
   }
 }
 
-//     Social  in ( _global-styles.scss )
-.social__icon_team {
+//     Social
+
+.social {
+  display: flex;
+  justify-content: center;
+
+  &__link:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.social__icon--team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   fill: $border-color;
   background-color: rgba(238, 238, 238, 0); //Прозорість
 
   transition: background-color $transition-duration-timing,
     fill $transition-duration-timing;
-}
 
-.social__icon_team:hover,
-.social__icon_team:focus {
-  fill: $primary-white-color;
-  background-color: $accent-coolor;
+  &:hover,
+  &:focus {
+    fill: $primary-white-color;
+    background-color: $accent-coolor;
+  }
 }

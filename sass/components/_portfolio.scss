@@ -12,26 +12,23 @@
   &__list:not(:last-child) {
     margin-right: 8px;
   }
+}
 
-  &__filter {
-    padding: 6px 22px;
-    background-color: $primary-button-color;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.6;
-    border: 1px solid transparent;
-    border-radius: 4px;
+.filling__filter {
+  padding: 6px 22px;
+  background-color: $primary-button-color;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  border: 1px solid transparent;
+  border-radius: 4px;
 
-    transition: background-color $transition-duration-timing,
-      color $transition-duration-timing, box-shadow $transition-duration-timing;
-    /* transition-property: background-color, color, box-shadow;
-  transition-duration: $hover-duration;
-  transition-timing-function: $hover-timing-function; */
-  }
+  transition: background-color $transition-duration-timing,
+    color $transition-duration-timing, box-shadow $transition-duration-timing;
 
-  &__filter:hover,
-  &__filter:focus,
-  &__filter--location {
+  &:hover,
+  &:focus,
+  &--location {
     background-color: $accent-coolor;
     color: $primary-white-color;
     cursor: pointer;
@@ -47,17 +44,6 @@
     width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
-  }
-
-  &__link {
-    display: block;
-
-    transition: box-shadow $transition-duration-timing;
-  }
-
-  &__link:hover,
-  &__link:focus {
-    box-shadow: $shadow-cards-portfolio;
   }
 
   &__post:nth-child(3n) {
@@ -92,6 +78,17 @@
     color: $primary-text-color;
     font-size: 16px;
     line-height: 1.9;
+  }
+}
+
+.publication__link {
+  display: block;
+
+  transition: box-shadow $transition-duration-timing;
+
+  &:hover,
+  &:focus {
+    box-shadow: $shadow-cards-portfolio;
   }
 }
 

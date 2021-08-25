@@ -17,27 +17,27 @@
     margin: 0 auto;
   }
 
-  &__focus {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 170px;
-    height: 92px;
-    border: 1px solid $border-color;
-    border-radius: 4px;
-    fill: $border-color;
-
-    transition: border $transition-duration-timing,
-      fill $transition-duration-timing;
-  }
-
-  &__focus:hover,
-  &__focus:focus {
-    border: 1px solid $accent-coolor;
-    fill: $accent-coolor;
-  }
-
   &__logotypes:not(:last-child) {
     margin-right: 30px;
+  }
+}
+
+.partners__focus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  fill: $border-color;
+
+  transition: border $transition-duration-timing,
+    fill $transition-duration-timing;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-coolor;
+    fill: $accent-coolor;
   }
 }

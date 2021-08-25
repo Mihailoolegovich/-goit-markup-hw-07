@@ -5,7 +5,7 @@
   padding: 60px 0;
 }
 
-.container_footer {
+.container__footer {
   display: flex;
   align-items: baseline;
 }
@@ -15,6 +15,9 @@
   margin-bottom: 20px;
   height: 31px;
   color: $primary-white-color;
+}
+.nav__site--web {
+  color: $accent-coolor;
 }
 
 //     Addresses
@@ -66,19 +69,32 @@
   }
 }
 
-//     Social  in ( _global-styles.scss )
+//     Social
+.social {
+  display: flex;
+
+  &__link:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
 .social__icon--footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   fill: $primary-white-color;
   background-color: rgba(225, 225, 225, 0.1);
 
   transition: background-color $transition-duration-timing;
-}
 
-.social__icon--footer:hover,
-.social__icon--footer:focus {
-  background-color: $accent-coolor;
+  &:hover,
+  &:focus {
+    background-color: $accent-coolor;
+  }
 }
-
 //      Form-footer
 
 .form-footer {
@@ -101,77 +117,48 @@
     align-items: baseline;
   }
 
-  &__input {
-    padding-left: 16px;
-    margin-right: 12px;
-    height: 50px;
-    width: 100%;
-    background-color: $background-color;
-    border: 1px solid $border-color;
-    border-radius: 4px;
+  &__icon {
+    margin-left: 10px;
   }
+}
 
-  &__input::placeholder {
+.form-footer__input {
+  padding-left: 16px;
+  margin-right: 12px;
+  height: 50px;
+  width: 100%;
+  background-color: $background-color;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+
+  &::placeholder {
     display: flex;
     align-items: centr;
     color: $primary-white-color;
   }
 
-  &__input:focus::-webkit-input-placeholder {
+  &:focus::-webkit-input-placeholder {
     color: transparent;
   }
 
-  &__input:not(:focus) {
+  &:not(:focus) {
     color: $primary-white-color;
   }
 
-  &__input:focus {
+  &:focus {
     border: 1px solid $border-color;
     outline: none;
     color: $primary-white-color;
   }
-  // &__input {
-  //   height: 50px;
-  //   width: 100%;
-  //   padding-left: 16px;
-  //   margin-right: 12px;
-  //   background-color: $background-color;
-  //   border: 1px solid $border-color;
-  //   border-radius: 4px;
-  // }
+}
 
-  // &__input::placeholder {
-  //   display: flex;
-  //   align-items: centr;
-  //   color: $primary-white-color;
-  // }
+.form-footer__button {
+  //    Button in (_mixins.scss)
+  @include button();
+  border: none;
 
-  // &__input:focus::-webkit-input-placeholder {
-  //   color: transparent;
-  // }
-
-  &__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 50px;
-    padding: 10px 30px;
-    //  Button in ( _global-styless.scss)
-    @extend %button;
-
-    letter-spacing: 0.06em;
-    border: none;
-
-    transition: background-color $transition-duration-timing;
-  }
-
-  &__icon {
-    margin-left: 10px;
-  }
-
-  &__button:hover,
-  &__button:focus {
+  &:hover,
+  &:focus {
     background-color: #188ce8;
   }
 }
